@@ -84,12 +84,13 @@ body {
     grid-row: 2;
     background-color: rgb(245, 245, 245);
     display: grid;
-    grid-template: repeat(2, 1fr) / 7fr 3fr;
+    grid-template: repeat(2, 1fr) / 7fr 2fr;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     
 }
 
 /* Content Box CSS */
+/* Project display */
 .projects {
     grid-row: 1 / -1;
     grid-column: 1;
@@ -99,16 +100,14 @@ body {
     font-weight: 600;
 }
 
-.project-display * {
-    /* border: 2px solid red; */
-}
-
 .icons {
-    /* border: 2px solid red; */
     display: flex;
     justify-content: end;
     gap: 1.5rem;
-    align-self: ;
+}
+
+.icons span:hover {
+    color: #33D8F2;
 }
 
 .projects p {
@@ -144,17 +143,32 @@ body {
 
 .content > div {
     padding: 1rem;
+    border: 1px solid red;
 }
 
 .content h3 {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 15px;
+    border: 1px solid red;
 }
 
-.announcement {
+/* Announcements */
+
+.announcements {
     grid-row: 1;
     grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement-box,
+.trending-box {
+    height: 85%;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 1em;
 }
 
 .trending {
