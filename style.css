@@ -85,7 +85,8 @@ body {
     background-color: var(--theme-blue);
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 3rem;
+    padding: 1rem;
 }
 
 .content {
@@ -101,11 +102,38 @@ body {
 /* Sidebar */
 
 .sidebar * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color: white;
 }
 
+.logo img {
+    max-width: 60px;
+    /*Below changes the image from black to white*/
+    filter: invert(99%) sepia(79%) saturate(0%) hue-rotate(346deg) brightness(106%) contrast(101%);
+}
+.logo h1 {
+    font-size: 2rem;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
 
+li {
+    padding-bottom: 1.5rem; 
+    font-size: 1.1rem;
+}
+
+li:hover {
+    color: var(--theme-orange);
+    cursor: pointer;
+}
+
+span {
+    margin: 0.75rem;
+}
 
 
 /* Header */
@@ -117,6 +145,14 @@ body {
     align-items: center;
     gap: 5px;
     padding-left: 2rem;
+}
+
+.header #pfp {
+    transition: transform 0.3s ease-in-out;
+}
+
+.header #pfp:hover {
+    transform: rotate(30deg)
 }
 
 #search {
@@ -152,6 +188,10 @@ body {
 
 .profile-display #noti {
     max-width: 20px;
+}
+
+.profile-display #noti:hover {
+    filter: invert(55%) sepia(33%) saturate(4723%) hue-rotate(349deg) brightness(97%) contrast(95%);
 }
 
 .buttons, 
@@ -274,7 +314,7 @@ body {
 }
 
 .icons span:hover {
-    color: #33D8F2;
+    color: var(--theme-blue);
 }
 
 .project-display p {
